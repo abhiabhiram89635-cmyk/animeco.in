@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Watcher - Telugu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>🎬 AnimeWatcher</h1>
+            </div>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">
+                    <span class="en">Home</span>
+                    <span class="te" style="display:none;">హోమ్</span>
+                </a>
+                <a href="browse.html" class="nav-link">
+                    <span class="en">Browse</span>
+                    <span class="te" style="display:none;">బ్రౌజ్ చేయండి</span>
+                </a>
+                <a href="search.html" class="nav-link">
+                    <span class="en">Search</span>
+                    <span class="te" style="display:none;">వెతకండి</span>
+                </a>
+                <a href="watchlist.html" class="nav-link">
+                    <span class="en">My Watchlist</span>
+                    <span class="te" style="display:none;">నా జాబితా</span>
+                </a>
+                <a href="profile.html" class="nav-link">
+                    <span class="en">Profile</span>
+                    <span class="te" style="display:none;">ప్రొఫైల్</span>
+                </a>
+            </div>
+
+            <div class="header-controls">
+                <button class="lang-toggle" id="langToggle">
+                    <span class="en">தமிழ்</span>
+                    <span class="te" style="display:none;">🌐 EN</span>
+                </button>
+                <button class="logout-btn" id="logoutBtn" style="display:none;">
+                    <span class="en">Logout</span>
+                    <span class="te" style="display:none;">లాగ్‌అవుట్</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="en">Welcome to AnimeWatcher</h2>
+                <h2 class="te" style="display:none;">AnimeWatcher కు స్వాగతం</h2>
+
+                <p class="en">Watch your favorite anime with Telugu language support</p>
+                <p class="te" style="display:none;">తెలుగు భాష సమర్థన సహ మీకు ఇష్టమైన అనిమే చూడండి</p>
+
+                <div class="hero-buttons">
+                    <a href="browse.html" class="btn btn-primary">
+                        <span class="en">Start Exploring</span>
+                        <span class="te" style="display:none;">అన్వేషణ ప్రారంభించండి</span>
+                    </a>
+                    <button class="btn btn-secondary" id="authBtn">
+                        <span class="en">Sign In</span>
+                        <span class="te" style="display:none;">సైన్ ఇన్ చేయండి</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Anime Section -->
+        <section class="featured-section">
+            <h3 class="section-title">
+                <span class="en">Featured Anime</span>
+                <span class="te" style="display:none;">ఫీచర్ చేసిన అనిమే</span>
+            </h3>
+            <div class="anime-grid" id="featuredAnime">
+                <div class="loading">
+                    <span class="en">Loading...</span>
+                    <span class="te" style="display:none;">లోడ్ చేస్తున్నా...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Anime Section -->
+        <section class="popular-section">
+            <h3 class="section-title">
+                <span class="en">Popular Anime</span>
+                <span class="te" style="display:none;">ప్రసిద్ధ అనిమే</span>
+            </h3>
+            <div class="anime-grid" id="popularAnime">
+                <div class="loading">
+                    <span class="en">Loading...</span>
+                    <span class="te" style="display:none;">లోడ్ చేస్తున్నా...</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="en">&copy; 2024 AnimeWatcher. Watch anime in Telugu.</p>
+        <p class="te" style="display:none;">&copy; 2024 AnimeWatcher. తెలుగులో అనిమే చూడండి.</p>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-form">
+                <h2>
+                    <span class="en">Sign In / Sign Up</span>
+                    <span class="te" style="display:none;">సైన్ ఇన్ / సైన్ అప్</span>
+                </h2>
+
+                <input type="text" id="username" placeholder="Username / ఉపయోగకర్త పేరు" class="input-field">
+                <input type="password" id="password" placeholder="Password / పాస్‌వర్డ్" class="input-field">
+
+                <button class="btn btn-primary" id="submitAuthBtn">
+                    <span class="en">Submit</span>
+                    <span class="te" style="display:none;">సమర్పించు</span>
+                </button>
+                <p class="auth-note">
+                    <span class="en">Sign up with any username/password to get started</span>
+                    <span class="te" style="display:none;">ప్రారంభించడానికి ఏదైనా ఉపయోగకర్త పేరు/పాస్‌వర్డ్‌తో సైన్ అప్ చేయండి</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/language.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

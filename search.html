@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Anime - AnimeWatcher</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>🎬 AnimeWatcher</h1>
+            </div>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <span class="en">Home</span>
+                    <span class="te" style="display:none;">హోమ్</span>
+                </a>
+                <a href="browse.html" class="nav-link">
+                    <span class="en">Browse</span>
+                    <span class="te" style="display:none;">బ్రౌజ్ చేయండి</span>
+                </a>
+                <a href="search.html" class="nav-link active">
+                    <span class="en">Search</span>
+                    <span class="te" style="display:none;">వెతకండి</span>
+                </a>
+                <a href="watchlist.html" class="nav-link">
+                    <span class="en">My Watchlist</span>
+                    <span class="te" style="display:none;">నా జాబితా</span>
+                </a>
+                <a href="profile.html" class="nav-link">
+                    <span class="en">Profile</span>
+                    <span class="te" style="display:none;">ప్రొఫైల్</span>
+                </a>
+            </div>
+
+            <div class="header-controls">
+                <button class="lang-toggle" id="langToggle">
+                    <span class="en">తెలుగు</span>
+                    <span class="te" style="display:none;">🌐 EN</span>
+                </button>
+                <button class="logout-btn" id="logoutBtn" style="display:none;">
+                    <span class="en">Logout</span>
+                    <span class="te" style="display:none;">లాగ్‌అవుట్</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content search-content">
+        <div class="search-section">
+            <h2 class="section-title">
+                <span class="en">Search Anime</span>
+                <span class="te" style="display:none;">అనిమే వెతకండి</span>
+            </h2>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search anime title... / అనిమే శీర్షిక వెతకండి..." class="search-input">
+                <button class="btn btn-primary" id="searchBtn">
+                    <span class="en">Search</span>
+                    <span class="te" style="display:none;">వెతకండి</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="searchResults" class="anime-grid" style="display:none;">
+            <!-- Results loaded via JavaScript -->
+        </div>
+
+        <div id="noResults" class="no-results" style="display:none;">
+            <p class="en">No results found. Try searching for a different anime.</p>
+            <p class="te" style="display:none;">ఫలితాలు కనుగొనబడలేదు. వేరే అనిమే కోసం వెతకడానికి ప్రయత్నించండి.</p>
+        </div>
+
+        <div id="initialMessage" class="initial-message">
+            <p class="en">Enter an anime title to search</p>
+            <p class="te" style="display:none;">వెతకడానికి అనిమే శీర్షిక నమోదు చేయండి</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="en">&copy; 2024 AnimeWatcher. Watch anime in Telugu.</p>
+        <p class="te" style="display:none;">&copy; 2024 AnimeWatcher. తెలుగులో అనిమే చూడండి.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/language.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
